@@ -1,0 +1,31 @@
+[
+    {
+        "username":"AliLovesDean",
+        "roles": {
+            "User": 2001,
+            "Editor": 1984,
+            "Admin": 5150
+        },
+        "password":"$2b$10$RmuQX.SfAyc8vLHbTEQPf.YBRs90ZKzF.rvonkpLI.5Gs2gBfsdP6","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFsaUxvdmVzRGVhbiIsImlhdCI6MTY0ODgzNzk5MywiZXhwIjoxNjQ4OTI0MzkzfQ.1ZWbb1c24wgF4m54wE-_waZmpGddF-qXZ-F6CPzKajo"
+        },
+
+        {"username":"AliLovesDaisy",
+            "roles": {
+                "User": 2001
+            },
+        "password":"$2b$10$P7ifvlscnOpJgHR1jTRMuel.C/ZKI20nSpcVZSSIU7Y5PJjTk4ttS","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFsaUxvdmVzRGFpc3kiLCJpYXQiOjE2NDg4Mzg2OTAsImV4cCI6MTY0ODkyNTA5MH0.fP6PV5F5W_BrY2ypsfSbJV3GqlJ8MCo4kTOy6lIl7Oc"
+        },
+
+        {"username":"AliLovesFletcher",
+            "roles": {
+                "User": 2001,
+                "Editor": 1984
+            },
+        "password":"$2b$10$ZcfrGv2GlId9kvTRnBORpOLrT2qpae2D2cEKaE0y6/DnGiWNRQ2wG","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFsaUxvdmVzRmxldGNoZXIiLCJpYXQiOjE2NDg4NDAxNDEsImV4cCI6MTY0ODkyNjU0MX0.2hj35gnv_myorjmtJPgI2LrZ5h1-b5VXiwSOslazL50"
+        },
+
+        {"username":"AliLovesChunky",
+            "roles": {
+                "User": 2001
+            },
+        "password":"$2b$10$U9JikgL3P6/TvpOBDElrzeHBdQxdL9Q7e71tVTZetaG3moXvFeAxq","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFsaUxvdmVzQ2h1bmt5IiwiaWF0IjoxNjQ4ODQwMTU2LCJleHAiOjE2NDg5MjY1NTZ9.s-nfBpyGfbJQ8GHuoAWKeXRKXGi1Z9zZ48hrK0K2UK4"}]

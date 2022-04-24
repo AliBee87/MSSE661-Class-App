@@ -1,0 +1,12 @@
+20220328	19:44:54	40923980-7f74-4d12-aea3-8a52f12b6b1d	Error: Not allowed by CORS
+20220328	19:50:56	139eff2c-40a0-46ce-a360-2964f85de526	Error: Not allowed by CORS
+20220328	19:51:12	a962fb1c-2d12-4f99-a89a-fbfca475b0cf	Error: Not allowed by CORS
+20220328	19:52:28	d1816c37-5292-4b01-ac49-232cd99ded66	Error: Not allowed by CORS
+20220330	11:01:57	c4dae83e-dc56-4ea4-96a8-db72f73c3957	Error: ENOENT: no such file or directory, stat 'C:\Users\alibe\OneDrive\Documents\Regis\MSSE661\Week4\ARichardsonServer\routes\index.html'
+20220330	11:02:12	c82a2b0a-936a-413d-b514-f6c85ae6a055	Error: ENOENT: no such file or directory, stat 'C:\Users\alibe\OneDrive\Documents\Regis\MSSE661\Week4\ARichardsonServer\routes\index.html'
+20220330	11:05:36	b71e20a0-6934-451c-9073-ff85af221b98	Error: ENOENT: no such file or directory, stat 'C:\Users\alibe\OneDrive\Documents\Regis\MSSE661\Week4\ARichardsonServer\routes\index.html'
+20220330	11:07:22	6ea87ac8-04f7-43c3-81da-be0a2fb8f953	Error: ENOENT: no such file or directory, stat 'C:\Users\alibe\OneDrive\Documents\Regis\MSSE661\Week4\ARichardsonServer\routes\index.html'
+20220330	11:07:26	b4c93a57-0aa1-4fbf-b737-57be1ffbcd24	Error: ENOENT: no such file or directory, stat 'C:\Users\alibe\OneDrive\Documents\Regis\MSSE661\Week4\ARichardsonServer\routes\index.html'
+20220330	15:33:10	8e91aadd-efc0-451e-a011-bc3946e5911a	SyntaxError: Unexpected token P in JSON at position 16
+20220331	23:35:41	b7023e6d-60f1-4354-9287-9c4c86a40b10	SyntaxError: Unexpected end of JSON input
+20220418	13:54:58	8fda9fa8-a2c6-4524-baa1-8f07f320e82c	SyntaxError: Unexpected end of JSON input
