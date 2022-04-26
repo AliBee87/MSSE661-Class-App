@@ -42,7 +42,7 @@ const Login = () => {
 
             const accessToken = response?.data?.accessToken;
             const roles = response?.data?.roles;
-            setAuth({ user, pwd, roles, accessToken });
+            setAuth({user, pwd, roles, accessToken });
             setUser('');
             setPwd('');
             navigate(from, { replace: true });
@@ -50,7 +50,7 @@ const Login = () => {
             if(!err?.response) {
                 setErrMsg('No Server Response');
             } else if (err.response?.status === 400) {
-                setErrMsg('Missing Username or Password');
+                setErrMsg('Missing Email, Username or Password');
             } else if (err.response?.status === 401) {
                 setErrMsg('Unauthorized');
             } else {
@@ -66,6 +66,8 @@ const Login = () => {
         <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
         <h1>Sign In</h1>
         <form onSubmit={handleSubmit}>
+    
+
             <label htmlFor="username">Username:</label>
             <input 
             type="text" 
@@ -90,7 +92,7 @@ const Login = () => {
         <p>
             Need an Account?<br />
             <span className="line">
-            <Link to="/register">Sign Up</Link>
+            <Link to="/register">Sign Up!</Link>
             </span>
         </p>
             </section>
