@@ -3,11 +3,11 @@ const bcrypt = require('bcrypt'); //install bcrypt to hash and salt incoming pas
 
 const handleNewUser = async (req, res) => {  //define handler for new user information that we'll receive at register route
     console.log('Register New User');
-    const { user, pwd } = req.body;
-    if (!user || !pwd) return res.status(400).json({ 'message': 'Username and Password are required.' }); 
+    const { email, user, pwd } = req.body;
+    if (!email || !user || !pwd) return res.status(400).json({ 'message': 'Email, Username, Password are required.' }); 
 
     //check for duplicate usernames in database
-    const duplicate = await User.findOne({ username: user }).exec();
+    const duplicate = await User.findOne({ username: user, emailaddress: email }).exec();
     if (duplicate) return res.sendStatus(409); //409: conflict
     
     try{
@@ -16,6 +16,7 @@ const handleNewUser = async (req, res) => {  //define handler for new user infor
        
         //create and store new user
         const result = await User.create({ 
+            "email": email,
             "username": user, 
             "password": hashedPwd 
         });
