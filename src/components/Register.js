@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from '../api/axios'; 
 import { Link } from "react-router-dom";
 //requirements for password and user
+const EMAIL_REGEX = /^(.+)@(.+)$/;
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const REGISTER_URL = '/register'; //for "post" URL for endpoint for API
@@ -11,6 +12,10 @@ const REGISTER_URL = '/register'; //for "post" URL for endpoint for API
 const Register = () => {
     const userRef = useRef(); //allows us to set focus on user input when it loads
     const errRef = useRef(); //set focus on error
+//state for email field
+    const [email, setEmail] = useState('');
+    const [validEmail, setValidEmail] = useState(false);
+    const [emailFocus, setEmailFocus] = useState(false);
 //state for user field
     const [user, setUser] = useState('');
     const [validName, setValidName] = useState(false); //boolean
@@ -30,6 +35,10 @@ const Register = () => {
     useEffect(() => {
         userRef.current.focus();
     }, []) //dependency array
+//useEffect for email
+    useEffect(() => {
+        setValidEmail(EMAIL_REGEX.test(email));
+    }, [email])    
 //useEffect applied to username
     useEffect(() => {
         setValidName(USER_REGEX.test(user));
@@ -42,20 +51,21 @@ const Register = () => {
 //useEffect for error message
     useEffect(() => {
         setErrMsg('');
-    }, [user, pwd, matchPwd]) //anytime user changes the state of one of these three state pieces in dependency array, then error message will clear out
+    }, [email, user, pwd, matchPwd]) //anytime user changes the state of one of these three state pieces in dependency array, then error message will clear out
 //"submit button"
     const handleSubmit = async (e) => { 
         e.preventDefault(); //only thing enforcing REGEX validation is the submit button, which can compromise security
         //"if" button that validates the state of the user and password again
+        const v3 = EMAIL_REGEX.test(email);
         const v1 = USER_REGEX.test(user);
         const v2 = PWD_REGEX.test(pwd);
-        if (!v1 || !v2) {
+        if (!v3|| !v1 || !v2) {
             setErrMsg("Invalid Entry");
             return; //doesn't submit anything to backend that would have the database that would save the user with invalid info
         } //using axios for try/catch block
         try {
             const response = await axios.post(REGISTER_URL,
-                JSON.stringify({ user, pwd }), //provide payload, backend expecting properties user and pwd
+                JSON.stringify({ email, user, pwd }), //provide payload, backend expecting properties user and pwd
                 {
                     headers: { 'Content-Type': 'application/json' }, //headers has its own object
                     withCredentials: true 
@@ -64,7 +74,8 @@ const Register = () => {
             console.log(JSON.stringify(response?.data)); //axios can send back data, access token
             //console.log(JSON.stringify(response)) //full response object that you want to see 
             setSuccess(true);
-            
+
+            setEmail('');
             setUser('');
             setPwd('');
             setMatchPwd('');
@@ -87,7 +98,7 @@ const Register = () => {
                 <section>
                     <h1>Success!</h1>
                     <p>
-                        <a href="#">Sign In</a>
+                    <Link to="/login">Sign In</Link>
                     </p>
                 </section>
             ) : (
@@ -95,6 +106,28 @@ const Register = () => {
                     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p> 
                     <h1>Register</h1>
                     <form onSubmit={handleSubmit}>
+                    <label htmlFor="email">
+                            Email:
+                            <FontAwesomeIcon icon={faCheck} className={validEmail ? "valid" : "hide"} />
+                            <FontAwesomeIcon icon={faTimes} className={validEmail || !email ? "hide" : "invalid"} />
+                        </label>
+                        <input
+                            type="text"
+                            id="email"
+                            ref={userRef}
+                            autoComplete="off"
+                            onChange={(e) => setEmail(e.target.value)}
+                            value={email}
+                            required
+                            aria-invalid={validEmail ? "false" : "true"}
+                            aria-describedby="uidnote"
+                            onFocus={() => setEmailFocus(true)}
+                            onBlur={() => setEmailFocus(false)}
+                        />
+                        <p id="uidnote" className={emailFocus && email && !validName ? "instructions" : "offscreen"}>
+                            <FontAwesomeIcon icon={faInfoCircle} />
+                            Please enter a valid email<br />
+                        </p>
                         <label htmlFor="username">
                             Username:
                             <FontAwesomeIcon icon={faCheck} className={validName ? "valid" : "hide"} />
