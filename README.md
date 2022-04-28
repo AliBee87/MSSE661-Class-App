@@ -71,7 +71,7 @@ Generate, copy and paste each output from these commands to both ACCESS_TOKEN_SE
 In a new editor window, enter: 
 
 ```
-git clone https://github.com/AliBee87/weeksalmon.git **(for final project. Class final is included in MSSE661 repo)**
+git clone https://github.com/AliBee87/weeksalmon.git **(for final app. Class final is in the week6 branch of this repo)**
 ```
 
 Then, input the following to **install React:**
