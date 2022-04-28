@@ -13,7 +13,7 @@ This project is built with **JavaScript using Node Express and tested with Thund
   
   cd MSSE661MongoAPI
   
-  npm install
+  npm i
   ```
   
 
@@ -34,10 +34,15 @@ After installing NPM, **_ensure the following packages are installed. If not, us
    ```
     
 You'll need to **_create a .env file in the file tree at the root. In it copy and paste the following_**:
-    
+
+
     ACCESS_TOKEN_SECRET=
     REFRESH_TOKEN_SECRET=
-    DATABASE_URI=mongodb+srv://<username>:<password>@cluster0.ta6fn.mongodb.net/SalmonDB?retryWrites=true&w=majority
+    (for CLASS APP) DATABASE_URI=mongodb+srv://<username>:<password>@cluster0.ta6fn.mongodb.net/MongoDB?retryWrites=true&w=majority 
+    (for FINAL APP) DATABASE_URI=mongodb+srv://<username>:<password>@cluster0.ta6fn.mongodb.net/SalmonDB?retryWrites=true&w=majority 
+  
+  
+
     
 These will require personal access tokens. To **_create a personal access token,_** write the following commands in your terminal:
   ```
@@ -66,24 +71,23 @@ Generate, copy and paste each output from these commands to both ACCESS_TOKEN_SE
 In a new editor window, enter: 
 
 ```
-git clone https://github.com/AliBee87/MSSE661-Class-App.git **(for class project)**
-git clone https://github.com/AliBee87/weeksalmon.git **(for final project)**
+git clone https://github.com/AliBee87/weeksalmon.git **(for final project. Class final is included in MSSE661 repo)**
 ```
 
-Then, in your terminal, input the following to **install React:**
+Then, input the following to **install React:**
 
 ```
-npx-create-react-app [file name of your choosing]
+npx create-react-app [file name of your choosing]
 ```
 
 Then, enter
 
 ```
-cd [file name that you chose]
+cd [file name you chose]
 code .
 ```
 
-Ensure the following packages are installed. If not, install the following **packages using npm i:**
+Ensure the following packages are installed using **npm i:**
 ```
 @fortawesome/fontawesome-svg-core
 
@@ -92,6 +96,8 @@ Ensure the following packages are installed. If not, install the following **pac
 @fortawesome/react-fontawesome
 
 axios
+
+react-router-dom
 ```
 
 **Then, to run the Front End, enter npm start in your terminal.** Thanks for checking out my work! 
