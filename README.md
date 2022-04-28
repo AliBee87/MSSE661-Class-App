@@ -13,11 +13,11 @@ This project is built with **JavaScript using Node Express and tested with Thund
   
   cd MSSE661MongoAPI
   
-  npm install
+  npm i
   ```
   
 
-After installing NPM, **_install the following packages using_**:
+After installing NPM, **_ensure the following packages are installed. If not, use the command npm i with these package names_**:
   ```   
     npm i bcrypt
     npm i cookie-parser
@@ -37,7 +37,8 @@ You'll need to **_create a .env file in the file tree at the root. In it copy an
     
     ACCESS_TOKEN_SECRET=
     REFRESH_TOKEN_SECRET=
-    DATABASE_URI=mongodb+srv://<username>:<password>@cluster0.ta6fn.mongodb.net/SalmonDB?retryWrites=true&w=majority
+    DATABASE_URI=mongodb+srv://<username>:<password>@cluster0.ta6fn.mongodb.net/MongoDB?retryWrites=true&w=majority (for CLASS APP)
+    DATABASE_URI=mongodb+srv://<username>:<password>@cluster0.ta6fn.mongodb.net/SalmonDB?retryWrites=true&w=majority (for FINAL APP)
     
 These will require personal access tokens. To **_create a personal access token,_** write the following commands in your terminal:
   ```
@@ -69,20 +70,20 @@ In a new editor window, enter:
 git clone https://github.com/AliBee87/weeksalmon.git **(for final project. Class final is included in MSSE661 repo)**
 ```
 
-Then, in your terminal, input the following to **install React:**
+Then, input the following to **install React:**
 
 ```
-npx-create-react-app weeksix
+npx create-react-app [file name of your choosing]
 ```
 
 Then, enter
 
 ```
-cd weeksix
+cd [file name you chose]
 code .
 ```
 
-Install the following **packages using npm i:**
+Ensure the following packages are installed using **npm i:**
 ```
 @fortawesome/fontawesome-svg-core
 
@@ -91,6 +92,8 @@ Install the following **packages using npm i:**
 @fortawesome/react-fontawesome
 
 axios
+
+react-router-dom
 ```
 
 **Then, to run the Front End, enter npm start in your terminal.** Thanks for checking out my work! 
