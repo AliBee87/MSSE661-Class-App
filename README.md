@@ -17,7 +17,7 @@ This project is built with **JavaScript using Node Express and tested with Thund
   ```
   
 
-After installing NPM, **_install the following packages using_**:
+After installing NPM, **_ensure the following packages are installed. If not, use the command npm i with these package names_**:
   ```   
     npm i bcrypt
     npm i cookie-parser
@@ -66,23 +66,24 @@ Generate, copy and paste each output from these commands to both ACCESS_TOKEN_SE
 In a new editor window, enter: 
 
 ```
-git clone https://github.com/AliBee87/MSSE661-Class-App.git
+git clone https://github.com/AliBee87/MSSE661-Class-App.git **(for class project)**
+git clone https://github.com/AliBee87/weeksalmon.git **(for final project)**
 ```
 
 Then, in your terminal, input the following to **install React:**
 
 ```
-npx-create-react-app weeksix
+npx-create-react-app [file name of your choosing]
 ```
 
 Then, enter
 
 ```
-cd weeksix
+cd [file name that you chose]
 code .
 ```
 
-Install the following **packages using npm i:**
+Ensure the following packages are installed. If not, install the following **packages using npm i:**
 ```
 @fortawesome/fontawesome-svg-core
 
