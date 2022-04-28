@@ -70,23 +70,22 @@ Generate, copy and paste each output from these commands to both ACCESS_TOKEN_SE
 In a new editor window, enter: 
 
 ```
-git clone https://github.com/AliBee87/weeksalmon.git **(for final app. Class final is in the week6 branch of this repo)**
+git clone https://github.com/AliBee87/weeksalmon.git **(for final project. Class final can be found in MSSE661 repo, branch week6)**
 ```
 
-Then, input the following to **install React:**
+Then, in your terminal, input 
 
 ```
-npx create-react-app [file name of your choosing]
+cd weeksalmon
 ```
 
 Then, enter
 
 ```
-cd [file name you chose]
-code .
+npm i
 ```
 
-Ensure the following packages are installed using **npm i:**
+Ensure the following packages are installed. If not, install the following **packages using npm i:**
 ```
 @fortawesome/fontawesome-svg-core
 
@@ -97,6 +96,8 @@ Ensure the following packages are installed using **npm i:**
 axios
 
 react-router-dom
+
 ```
 
 **Then, to run the Front End, enter npm start in your terminal.** Thanks for checking out my work! 
+
