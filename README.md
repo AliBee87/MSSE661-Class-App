@@ -37,8 +37,8 @@ You'll need to **_create a .env file in the file tree at the root. In it copy an
     
     ACCESS_TOKEN_SECRET=
     REFRESH_TOKEN_SECRET=
-    DATABASE_URI=mongodb+srv://<username>:<password>@cluster0.ta6fn.mongodb.net/MongoDB?retryWrites=true&w=majority (for CLASS APP)
-    DATABASE_URI=mongodb+srv://<username>:<password>@cluster0.ta6fn.mongodb.net/SalmonDB?retryWrites=true&w=majority (for FINAL APP)
+   **(for CLASS APP)** DATABASE_URI=mongodb+srv://<username>:<password>@cluster0.ta6fn.mongodb.net/MongoDB?retryWrites=true&w=majority 
+   **(for FINAL APP)** DATABASE_URI=mongodb+srv://<username>:<password>@cluster0.ta6fn.mongodb.net/SalmonDB?retryWrites=true&w=majority (for FINAL APP)
     
 These will require personal access tokens. To **_create a personal access token,_** write the following commands in your terminal:
   ```
