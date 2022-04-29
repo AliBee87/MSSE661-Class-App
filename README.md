@@ -38,7 +38,9 @@ You'll need to **_create a .env file in the file tree at the root. In it copy an
 
     ACCESS_TOKEN_SECRET=
     REFRESH_TOKEN_SECRET=
-    DATABASE_URI=mongodb+srv://<username>:<password>@cluster0.ta6fn.mongodb.net/MongoDB?retryWrites=true&w=majority
+    DATABASE_URI=mongodb+srv://<username>:<password>@cluster0.ta6fn.mongodb.net/SalmonDB?retryWrites=true&w=majority
+    
+    //yes, I understand the names of the backends are reversed for my final app and class app, it's just something I've chosen to go with 
   
   
 
